@@ -58,18 +58,16 @@ namespace Projet.Forms
                 {
                     Panier p = Panier.getPanierByUser(Form1.currentUser);
 
-                    SqlCommand cmdId = new SqlCommand("SELECT id FROM Utilisateur WHERE pseudo='" + Form1.currentUser + "'", Form1.cnGC);
-                    int id = (int)cmdId.ExecuteScalar();
-
                     DateTime date = DateTime.Now;
+                    double total = Panier.getPanierByUser(Form1.currentUser).getPrice();
 
                     // SELECT SCOPE pour récupérer l'id qui lui sera attribué à l'insert
-                    SqlCommand cmdInsertCommand = new SqlCommand("INSERT INTO Commande (dateC, idClient) VALUES ('" + date + "'," + id + "); SELECT SCOPE_IDENTITY()", Form1.cnGC);
-                    cmdInsertCommand.ExecuteScalar();
+                    SqlCommand cmdInsertCommand = new SqlCommand("INSERT INTO Commande (dateC, total, idClient) VALUES ('" + date + "', " + total + ", " + Form1.id + "); SELECT SCOPE_IDENTITY()", Form1.cnGC);
+                    int id = int.Parse(cmdInsertCommand.ExecuteScalar().ToString());
 
                     foreach (KeyValuePair<Article, int> kvp in p.contenuPanier)
                     {
-                        SqlCommand cmdInsertLigneCmd = new SqlCommand("INSERT INTO LigneCmd (idCommande, idArticle, quantite) VALUES (" + int.Parse(cmdInsertCommand.ExecuteScalar().ToString()) + ", " + kvp.Key.Id + ", " + kvp.Value + ")", Form1.cnGC);
+                        SqlCommand cmdInsertLigneCmd = new SqlCommand("INSERT INTO LigneCmd (idCommande, idArticle, quantite) VALUES (" + id + ", " + kvp.Key.Id + ", " + kvp.Value + ")", Form1.cnGC);
                         cmdInsertLigneCmd.ExecuteNonQuery();
                     }
 

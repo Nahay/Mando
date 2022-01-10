@@ -53,10 +53,10 @@
             this.cbProduits.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProduits.FormattingEnabled = true;
             this.cbProduits.IntegralHeight = false;
-            this.cbProduits.ItemHeight = 22;
+            this.cbProduits.ItemHeight = 30;
             this.cbProduits.Location = new System.Drawing.Point(282, 259);
             this.cbProduits.Name = "cbProduits";
-            this.cbProduits.Size = new System.Drawing.Size(217, 30);
+            this.cbProduits.Size = new System.Drawing.Size(217, 38);
             this.cbProduits.TabIndex = 1;
             this.cbProduits.Text = "Liste des produits";
             // 
@@ -68,7 +68,7 @@
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(807, 39);
             this.lblTitre.TabIndex = 19;
-            this.lblTitre.Text = "Voici la page pour supprimer un article !";
+            this.lblTitre.Text = "Supprimer un article";
             this.lblTitre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblReussite
@@ -77,7 +77,7 @@
             this.lblReussite.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.lblReussite.Location = new System.Drawing.Point(278, 422);
             this.lblReussite.Name = "lblReussite";
-            this.lblReussite.Size = new System.Drawing.Size(0, 21);
+            this.lblReussite.Size = new System.Drawing.Size(0, 23);
             this.lblReussite.TabIndex = 23;
             // 
             // lblValide
@@ -86,7 +86,7 @@
             this.lblValide.ForeColor = System.Drawing.Color.IndianRed;
             this.lblValide.Location = new System.Drawing.Point(275, 421);
             this.lblValide.Name = "lblValide";
-            this.lblValide.Size = new System.Drawing.Size(0, 21);
+            this.lblValide.Size = new System.Drawing.Size(0, 23);
             this.lblValide.TabIndex = 22;
             // 
             // FormSupprimer

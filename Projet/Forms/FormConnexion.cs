@@ -24,17 +24,28 @@ namespace Projet.Forms
             {
                 try
                 {
-                    SqlCommand cmdExists = new SqlCommand("SELECT isAdmin FROM Utilisateur WHERE pseudo='" + txtUsername.Text.Trim() + "' AND mdp=HASHBYTES('SHA2_256','" + txtMdp.Text.Trim() + "')", Form1.cnGC);
+                    SqlCommand cmdExists = new SqlCommand("SELECT * FROM Utilisateur WHERE pseudo='" + txtUsername.Text.Trim() + "' AND mdp=HASHBYTES('SHA2_256','" + txtMdp.Text.Trim() + "')", Form1.cnGC);
 
-                    if (cmdExists.ExecuteScalar() != null)
+                    SqlDataReader dr = cmdExists.ExecuteReader();
+
+                    if (dr.HasRows)
                     {
-                        Form1.isAdmin = (int)cmdExists.ExecuteScalar();
+                        while (dr.Read())
+                        {
+                            Form1.isAdmin = (int)dr["isAdmin"];
+                            Form1.id = (int)dr["id"];
+                            Form1.name = (string)dr["nom"];
+                            Form1.surname = (string)dr["prenom"];
+                        }
 
                         Form1.currentUser = txtUsername.Text;
                         Form1.CurrentForm = new FormAccueil();
                         Form1.setMenu(true);
                     }
                     else lblRemplir.Text = "Nom d'utilisateur ou mot de passe incorrect.";
+
+                    dr.Close();
+                    dr = null;
                 }
 
                 catch (Exception ex)

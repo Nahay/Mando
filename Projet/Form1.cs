@@ -27,7 +27,10 @@ namespace Projet
         private static Form _currentForm;
 
         public static string currentUser;
+        public static int id;
         public static int  isAdmin;
+        public static string name;
+        public static string surname;
 
         public static Form activeForm;
 
@@ -94,6 +97,10 @@ namespace Projet
                     btnLeave.Visible = false;
                     lblPanel.Text = "INSCRIPTION";
                     break;
+                case "FormProfil":
+                    btnLeave.Visible = true;
+                    lblPanel.Text = "PROFIL";
+                    break;
             }
         }
 
@@ -153,6 +160,11 @@ namespace Projet
             OpenChildForm(new Forms.FormConnexion(), panelContent);
         }
 
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormProfil(), panelContent);
+        }
+
         // ----------------------------------------------------------------------------------------------------------
 
 
@@ -170,6 +182,7 @@ namespace Projet
                 btnCommander.Visible = true;
                 btnProduits.Visible = true;
                 btnDeco.Visible = true;
+                btnProfil.Visible = true;
 
                 if (isAdmin == 1)
                 {
@@ -188,10 +201,10 @@ namespace Projet
                 btnAdd.Visible = false;
                 btnRemove.Visible=false;
                 btnDeco.Visible = false;
+                btnProfil.Visible = false;
                 btnMConnexion.Visible = true;
                 btnMInscription.Visible = true;
             }
         }
-
     }
 }

@@ -45,7 +45,7 @@
             this.lblReussite.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.lblReussite.Location = new System.Drawing.Point(495, 441);
             this.lblReussite.Name = "lblReussite";
-            this.lblReussite.Size = new System.Drawing.Size(0, 21);
+            this.lblReussite.Size = new System.Drawing.Size(0, 23);
             this.lblReussite.TabIndex = 20;
             // 
             // lblValide
@@ -54,7 +54,7 @@
             this.lblValide.ForeColor = System.Drawing.Color.IndianRed;
             this.lblValide.Location = new System.Drawing.Point(492, 440);
             this.lblValide.Name = "lblValide";
-            this.lblValide.Size = new System.Drawing.Size(0, 21);
+            this.lblValide.Size = new System.Drawing.Size(0, 23);
             this.lblValide.TabIndex = 19;
             // 
             // btnAjouter
@@ -78,7 +78,7 @@
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(806, 39);
             this.lblTitre.TabIndex = 15;
-            this.lblTitre.Text = "Voici est la page pour ajouter un article !";
+            this.lblTitre.Text = "Ajouter un article";
             this.lblTitre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNom
@@ -86,7 +86,7 @@
             this.txtNom.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNom.Location = new System.Drawing.Point(499, 232);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(138, 33);
+            this.txtNom.Size = new System.Drawing.Size(138, 40);
             this.txtNom.TabIndex = 1;
             // 
             // txtPrix
@@ -94,7 +94,7 @@
             this.txtPrix.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrix.Location = new System.Drawing.Point(499, 299);
             this.txtPrix.Name = "txtPrix";
-            this.txtPrix.Size = new System.Drawing.Size(138, 33);
+            this.txtPrix.Size = new System.Drawing.Size(138, 40);
             this.txtPrix.TabIndex = 2;
             // 
             // label1
@@ -103,7 +103,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(495, 208);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 21);
+            this.label1.Size = new System.Drawing.Size(187, 23);
             this.label1.TabIndex = 22;
             this.label1.Text = "Libellé de l\'article ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -114,7 +114,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(495, 275);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 21);
+            this.label2.Size = new System.Drawing.Size(41, 23);
             this.label2.TabIndex = 23;
             this.label2.Text = "Prix";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -125,10 +125,10 @@
             this.lbArticles.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbArticles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbArticles.FormattingEnabled = true;
-            this.lbArticles.ItemHeight = 21;
+            this.lbArticles.ItemHeight = 23;
             this.lbArticles.Location = new System.Drawing.Point(49, 208);
             this.lbArticles.Name = "lbArticles";
-            this.lbArticles.Size = new System.Drawing.Size(268, 210);
+            this.lbArticles.Size = new System.Drawing.Size(268, 207);
             this.lbArticles.TabIndex = 24;
             // 
             // FormAjouter

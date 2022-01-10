@@ -44,7 +44,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(806, 39);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Voici la liste des produits disponibles !";
+            this.label2.Text = "Liste des produits";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbProduits
@@ -52,10 +52,10 @@
             this.cbProduits.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProduits.FormattingEnabled = true;
             this.cbProduits.IntegralHeight = false;
-            this.cbProduits.ItemHeight = 22;
+            this.cbProduits.ItemHeight = 30;
             this.cbProduits.Location = new System.Drawing.Point(282, 258);
             this.cbProduits.Name = "cbProduits";
-            this.cbProduits.Size = new System.Drawing.Size(213, 30);
+            this.cbProduits.Size = new System.Drawing.Size(213, 38);
             this.cbProduits.TabIndex = 9;
             this.cbProduits.Text = "Liste des produits";
             // 
@@ -77,7 +77,7 @@
             this.txtQtt.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQtt.Location = new System.Drawing.Point(282, 319);
             this.txtQtt.Name = "txtQtt";
-            this.txtQtt.Size = new System.Drawing.Size(49, 37);
+            this.txtQtt.Size = new System.Drawing.Size(49, 44);
             this.txtQtt.TabIndex = 11;
             // 
             // lblValide
@@ -86,7 +86,7 @@
             this.lblValide.ForeColor = System.Drawing.Color.IndianRed;
             this.lblValide.Location = new System.Drawing.Point(275, 392);
             this.lblValide.Name = "lblValide";
-            this.lblValide.Size = new System.Drawing.Size(0, 21);
+            this.lblValide.Size = new System.Drawing.Size(0, 23);
             this.lblValide.TabIndex = 13;
             // 
             // lblReussite
@@ -95,7 +95,7 @@
             this.lblReussite.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.lblReussite.Location = new System.Drawing.Point(278, 393);
             this.lblReussite.Name = "lblReussite";
-            this.lblReussite.Size = new System.Drawing.Size(0, 21);
+            this.lblReussite.Size = new System.Drawing.Size(0, 23);
             this.lblReussite.TabIndex = 14;
             // 
             // FormProduits

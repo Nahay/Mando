@@ -45,7 +45,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(810, 39);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Voici la page pour commander !";
+            this.label1.Text = "Commander";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTotal
@@ -55,7 +55,7 @@
             this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(36, 468);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 21);
+            this.lblTotal.Size = new System.Drawing.Size(0, 23);
             this.lblTotal.TabIndex = 15;
             // 
             // btnCommander
@@ -78,10 +78,10 @@
             this.lbPanier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbPanier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbPanier.FormattingEnabled = true;
-            this.lbPanier.ItemHeight = 21;
+            this.lbPanier.ItemHeight = 23;
             this.lbPanier.Location = new System.Drawing.Point(250, 188);
             this.lbPanier.Name = "lbPanier";
-            this.lbPanier.Size = new System.Drawing.Size(268, 210);
+            this.lbPanier.Size = new System.Drawing.Size(268, 207);
             this.lbPanier.TabIndex = 16;
             // 
             // btnMoins
@@ -114,7 +114,7 @@
             this.lblValide.ForeColor = System.Drawing.Color.IndianRed;
             this.lblValide.Location = new System.Drawing.Point(36, 510);
             this.lblValide.Name = "lblValide";
-            this.lblValide.Size = new System.Drawing.Size(0, 21);
+            this.lblValide.Size = new System.Drawing.Size(0, 23);
             this.lblValide.TabIndex = 19;
             // 
             // FormCommander
