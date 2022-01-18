@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Projet
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
          public static Form CurrentForm
         {
@@ -36,7 +36,7 @@ namespace Projet
 
         public static SqlConnection cnGC;
 
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
 

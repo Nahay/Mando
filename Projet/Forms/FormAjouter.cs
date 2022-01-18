@@ -30,7 +30,7 @@ namespace Projet.Forms
 
                     if (int.TryParse(txtPrix.Text, out prix)) 
                     {
-                        SqlCommand cmdInsert = new SqlCommand("INSERT INTO Article (libelle, prixVente) VALUES ('"+nom+"','"+prix+"')", Form1.cnGC);
+                        SqlCommand cmdInsert = new SqlCommand("INSERT INTO Article (libelle, prixVente) VALUES ('"+nom+"','"+prix+"')", FormMain.cnGC);
                         cmdInsert.ExecuteNonQuery();
 
                         lblReussite.Text = "L'article " +nom+ " a été ajouté.";

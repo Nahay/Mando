@@ -24,7 +24,7 @@ namespace Projet.Forms
             {
                 try
                 {
-                    SqlCommand cmdExists = new SqlCommand("SELECT count(*) nb FROM Utilisateur WHERE pseudo='" + txtUsername.Text.Trim() + "'", Form1.cnGC);
+                    SqlCommand cmdExists = new SqlCommand("SELECT count(*) nb FROM Utilisateur WHERE pseudo='" + txtUsername.Text.Trim() + "'", FormMain.cnGC);
                     if ((int)cmdExists.ExecuteScalar() == 0)
                     {
                         SqlCommand cmdInsertUser = new SqlCommand("INSERT INTO Utilisateur (pseudo, mdp, nom, prenom, isAdmin) VALUES ('"
@@ -32,9 +32,9 @@ namespace Projet.Forms
                             "HASHBYTES('SHA2_256','" + txtMdp.Text.Trim() + "'),'"
                             + txtNom.Text.Trim() + "','"
                             + txtPrenom.Text.Trim() + "',0)"
-                        , Form1.cnGC);
+                        , FormMain.cnGC);
                         cmdInsertUser.ExecuteNonQuery();
-                        Form1.CurrentForm = new FormConnexion();
+                        FormMain.CurrentForm = new FormConnexion();
                     }
                 }
 

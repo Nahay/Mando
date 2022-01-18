@@ -28,13 +28,13 @@ namespace Projet.Forms
                 if (int.TryParse(txtQtt.Text, out nb)) {
                     if (nb > 0)
                     {
-                        if (Panier.getPanierByUser(Form1.currentUser) == null)
+                        if (Panier.getPanierByUser(FormMain.currentUser) == null)
                         {
-                            Panier.creerPanier(Form1.currentUser);
+                            Panier.creerPanier(FormMain.currentUser);
                         }
 
                         string nom = Article.getAllProducts()[cbProduits.SelectedIndex].Nom;
-                        Panier.getPanierByUser(Form1.currentUser).ajouterArticle(nom, nb);
+                        Panier.getPanierByUser(FormMain.currentUser).ajouterArticle(nom, nb);
                         
                         lblReussite.Text = nb + " " + nom + " ont été ajoutés au panier !";
                         lblValide.Text = "";

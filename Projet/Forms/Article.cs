@@ -32,7 +32,7 @@ namespace Projet.Forms
         {
             if (!nameExists(nom))
             {
-                SqlCommand cmdInsertArticle = new SqlCommand("INSERT INTO Article (libelle, prixVente) VALUES ('"+ nom + "','" + prix + "')", Form1.cnGC);
+                SqlCommand cmdInsertArticle = new SqlCommand("INSERT INTO Article (libelle, prixVente) VALUES ('"+ nom + "','" + prix + "')", FormMain.cnGC);
                 cmdInsertArticle.ExecuteNonQuery();
             }
             else MessageBox.Show("Ce produit existe déjà !");
@@ -46,7 +46,7 @@ namespace Projet.Forms
         public static void getAllProductsWithId()
         {
             listeArticles.Clear();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM article", Form1.cnGC);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM article", FormMain.cnGC);
             try
             {
                 SqlDataReader dr = cmd.ExecuteReader();

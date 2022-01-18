@@ -24,7 +24,7 @@ namespace Projet.Forms
             {
                 try
                 {
-                    SqlCommand cmdExists = new SqlCommand("SELECT * FROM Utilisateur WHERE pseudo='" + txtUsername.Text.Trim() + "' AND mdp=HASHBYTES('SHA2_256','" + txtMdp.Text.Trim() + "')", Form1.cnGC);
+                    SqlCommand cmdExists = new SqlCommand("SELECT * FROM Utilisateur WHERE pseudo='" + txtUsername.Text.Trim() + "' AND mdp=HASHBYTES('SHA2_256','" + txtMdp.Text.Trim() + "')", FormMain.cnGC);
 
                     SqlDataReader dr = cmdExists.ExecuteReader();
 
@@ -32,15 +32,15 @@ namespace Projet.Forms
                     {
                         while (dr.Read())
                         {
-                            Form1.isAdmin = (int)dr["isAdmin"];
-                            Form1.id = (int)dr["id"];
-                            Form1.name = (string)dr["nom"];
-                            Form1.surname = (string)dr["prenom"];
+                            FormMain.isAdmin = (int)dr["isAdmin"];
+                            FormMain.id = (int)dr["id"];
+                            FormMain.name = (string)dr["nom"];
+                            FormMain.surname = (string)dr["prenom"];
                         }
 
-                        Form1.currentUser = txtUsername.Text;
-                        Form1.CurrentForm = new FormAccueil();
-                        Form1.setMenu(true);
+                        FormMain.currentUser = txtUsername.Text;
+                        FormMain.CurrentForm = new FormAccueil();
+                        FormMain.setMenu(true);
                     }
                     else lblRemplir.Text = "Nom d'utilisateur ou mot de passe incorrect.";
 

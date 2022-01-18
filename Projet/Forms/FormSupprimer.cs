@@ -26,7 +26,7 @@ namespace Projet.Forms
                 // vérifie si l'article n'est pas commandé (contrainte de clé étrangère)
                 string nom = Article.getAllProducts()[cbProduits.SelectedIndex].Nom;
 
-                SqlCommand cmdCount = new SqlCommand("SELECT count(*) nb FROM LigneCmd JOIN Article ON LigneCmd.idArticle = Article.id WHERE Article.libelle ='"+nom+"'", Form1.cnGC);
+                SqlCommand cmdCount = new SqlCommand("SELECT count(*) nb FROM LigneCmd JOIN Article ON LigneCmd.idArticle = Article.id WHERE Article.libelle ='"+nom+"'", FormMain.cnGC);
 
                 if ((int)cmdCount.ExecuteScalar() == 0)
                 {
@@ -44,10 +44,10 @@ namespace Projet.Forms
                         Panier.listePaniers[i].getPanierInfo();
 
                         
-                        Panier.getPanierByUser(Form1.currentUser).getPanierInfo();
+                        Panier.getPanierByUser(FormMain.currentUser).getPanierInfo();
                     }
 
-                    SqlCommand cmdDelete = new SqlCommand("DELETE FROM Article WHERE libelle ='" + nom + "'", Form1.cnGC);
+                    SqlCommand cmdDelete = new SqlCommand("DELETE FROM Article WHERE libelle ='" + nom + "'", FormMain.cnGC);
                     cmdDelete.ExecuteNonQuery();
 
                     lblReussite.Text = "L'article " + nom + " a été supprimé.";

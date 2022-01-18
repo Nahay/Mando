@@ -71,7 +71,6 @@ C:\Users\ggame\Downloads\C#\Mando\Projet\bin\Debug\Projet.exe
 C:\Users\ggame\Downloads\C#\Mando\Projet\bin\Debug\Projet.pdb
 C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.csproj.AssemblyReference.cache
 C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.csproj.SuggestedBindingRedirects.cache
-C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.Form1.resources
 C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.Forms.FormAjouter.resources
 C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.Forms.FormCommander.resources
 C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.Forms.FormConnexion.resources
@@ -85,3 +84,4 @@ C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.csproj.CoreCompileInpu
 C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.exe
 C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.pdb
 C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.Forms.FormProfil.resources
+C:\Users\ggame\Downloads\C#\Mando\Projet\obj\Debug\Projet.FormMain.resources

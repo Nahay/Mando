@@ -21,12 +21,12 @@ namespace Projet.Forms
 
         private void FormProfil_Load(object sender, EventArgs e)
         {
-            lblNom.Text = "Nom : "+Form1.name;
-            lblPrenom.Text = "Prénom : "+Form1.surname;
+            lblNom.Text = "Nom : "+FormMain.name;
+            lblPrenom.Text = "Prénom : "+FormMain.surname;
 
             try
             {
-                SqlCommand cmdExists = new SqlCommand("SELECT * FROM Commande WHERE idClient=" + Form1.id, Form1.cnGC);
+                SqlCommand cmdExists = new SqlCommand("SELECT * FROM Commande WHERE idClient=" + FormMain.id, FormMain.cnGC);
 
                 SqlDataReader dr = cmdExists.ExecuteReader();
 

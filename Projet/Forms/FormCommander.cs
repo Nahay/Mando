@@ -21,7 +21,7 @@ namespace Projet.Forms
 
         private void FormCommander_Load(object sender, EventArgs e)
         {
-            if (Panier.getPanierByUser(Form1.currentUser) != null)
+            if (Panier.getPanierByUser(FormMain.currentUser) != null)
             {
                 setLb();
             }
@@ -33,7 +33,7 @@ namespace Projet.Forms
             {
                 string nom = lbPanier.SelectedItem.ToString().Split(new char[0], StringSplitOptions.RemoveEmptyEntries)[0];
 
-                Panier.getPanierByUser(Form1.currentUser).retirerArticle(nom);
+                Panier.getPanierByUser(FormMain.currentUser).retirerArticle(nom);
 
                 setLb();
             }
@@ -45,34 +45,35 @@ namespace Projet.Forms
             {
                 string nom = lbPanier.SelectedItem.ToString().Split(new char[0], StringSplitOptions.RemoveEmptyEntries)[0];
 
-                Panier.getPanierByUser(Form1.currentUser).ajouterArticle(nom,1);
+                Panier.getPanierByUser(FormMain.currentUser).ajouterArticle(nom,1);
                 setLb();
             }
         }
 
         private void btnCommander_Click(object sender, EventArgs e)
         {
-            if (Panier.getPanierByUser(Form1.currentUser) != null)
+            if (Panier.getPanierByUser(FormMain.currentUser) != null)
             {
-                if (Panier.getPanierByUser(Form1.currentUser).contenuPanier.Count > 0)
+                if (Panier.getPanierByUser(FormMain.currentUser).contenuPanier.Count > 0)
                 {
-                    Panier p = Panier.getPanierByUser(Form1.currentUser);
+                    Panier p = Panier.getPanierByUser(FormMain.currentUser);
 
-                    DateTime date = DateTime.Now;
-                    double total = Panier.getPanierByUser(Form1.currentUser).getPrice();
+                    DateTime dateT = DateTime.Now;
+                    string date = dateT.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                    double total = Panier.getPanierByUser(FormMain.currentUser).getPrice();
 
                     // SELECT SCOPE pour récupérer l'id qui lui sera attribué à l'insert
-                    SqlCommand cmdInsertCommand = new SqlCommand("INSERT INTO Commande (dateC, total, idClient) VALUES ('" + date + "', " + total + ", " + Form1.id + "); SELECT SCOPE_IDENTITY()", Form1.cnGC);
+                    SqlCommand cmdInsertCommand = new SqlCommand("INSERT INTO Commande (dateC, total, idClient) VALUES ('" + date + "', " + total + ", " + FormMain.id + "); SELECT SCOPE_IDENTITY()", FormMain.cnGC);
                     int id = int.Parse(cmdInsertCommand.ExecuteScalar().ToString());
 
                     foreach (KeyValuePair<Article, int> kvp in p.contenuPanier)
                     {
-                        SqlCommand cmdInsertLigneCmd = new SqlCommand("INSERT INTO LigneCmd (idCommande, idArticle, quantite) VALUES (" + id + ", " + kvp.Key.Id + ", " + kvp.Value + ")", Form1.cnGC);
+                        SqlCommand cmdInsertLigneCmd = new SqlCommand("INSERT INTO LigneCmd (idCommande, idArticle, quantite) VALUES (" + id + ", " + kvp.Key.Id + ", " + kvp.Value + ")", FormMain.cnGC);
                         cmdInsertLigneCmd.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show("Commande effectuée !\nTotal : " + Panier.getPanierByUser(Form1.currentUser).getPrice() + "€");
-                    Panier.getPanierByUser(Form1.currentUser).viderPanier();
+                    MessageBox.Show("Commande effectuée !\nTotal : " + Panier.getPanierByUser(FormMain.currentUser).getPrice() + "€");
+                    Panier.getPanierByUser(FormMain.currentUser).viderPanier();
                     lbPanier.Items.Clear();
                     lblTotal.Text = "Total : 0€";
                     lblValide.Text = "";
@@ -87,7 +88,7 @@ namespace Projet.Forms
 
         public void setLb()
         {
-            Panier p = Panier.getPanierByUser(Form1.currentUser);
+            Panier p = Panier.getPanierByUser(FormMain.currentUser);
             lbPanier.Items.Clear();
             foreach (KeyValuePair<Article, int> kvp in p.contenuPanier)
             {

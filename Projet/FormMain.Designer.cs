@@ -1,6 +1,6 @@
 ﻿namespace Projet
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panel1 = new System.Windows.Forms.Panel();
             btnRemove = new System.Windows.Forms.Button();
             btnAdd = new System.Windows.Forms.Button();
