@@ -34,7 +34,7 @@ namespace Projet.Forms
                 {
                     while (dr.Read())
                     {
-                        lbCommande.Items.Add(Convert.ToDateTime(dr["dateC"]).ToString("dd/MM/yyyy hh:mm")+ " "+dr["total"]+"€");
+                        lbCommande.Items.Add(Convert.ToDateTime(dr["dateC"]).ToString("dd/MM/yyyy HH:mm")+ " "+dr["total"]+"€");
                     }
                 }
 
