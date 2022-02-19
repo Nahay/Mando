@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/899001744728682516/934031033681207316/Mando.png" width="200" alt="Mando App Logo"/>
+    <img src="https://raw.githubusercontent.com/Nahay/Assets/master/Mando/Logo%20Mando.png" width="200" alt="Mando App Logo"/>
 </p>
 
 #  Mando
@@ -8,7 +8,7 @@ L'application Mando est une application de ventes sur le thème de la série [Th
 
 <br/>
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/899001744728682516/934030656986558464/Accueil_connecte.png" width="500" alt="Mando App Logo"/>
+    <img src="https://raw.githubusercontent.com/Nahay/Assets/master/Mando/Client/Accueil_connecte.png" width="600" alt="Mando App Logo"/>
 </p>
 
 <br/>
