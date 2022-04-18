@@ -31,7 +31,19 @@ namespace Projet.Forms
         {
             if (lbPanier.SelectedIndex > -1)
             {
-                string nom = lbPanier.SelectedItem.ToString().Split(new char[0], StringSplitOptions.RemoveEmptyEntries)[0];
+                string nom = "";
+                string[] noms = lbPanier.SelectedItem.ToString().Split(' ');
+
+                int i = 0;
+                foreach (var n in noms)
+                {
+                    if (i < noms.Length - 3)
+                    {
+                        if (i == 0) nom += n;
+                        else nom += " " + n;
+                    }
+                    i++;
+                }
 
                 Panier.getPanierByUser(FormMain.currentUser).retirerArticle(nom);
 
@@ -43,7 +55,20 @@ namespace Projet.Forms
         {
             if (lbPanier.SelectedIndex > -1)
             {
-                string nom = lbPanier.SelectedItem.ToString().Split(new char[0], StringSplitOptions.RemoveEmptyEntries)[0];
+                string nom = "";
+
+                string[] noms = lbPanier.SelectedItem.ToString().Split(' ');
+
+                int i = 0;
+                foreach (var n in noms)
+                {
+                    if (i < noms.Length - 3)
+                    {
+                        if (i == 0) nom += n;
+                        else nom += " " + n;
+                    }
+                    i++;
+                }
 
                 Panier.getPanierByUser(FormMain.currentUser).ajouterArticle(nom,1);
                 setLb();

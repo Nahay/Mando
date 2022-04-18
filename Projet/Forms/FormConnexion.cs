@@ -55,5 +55,10 @@ namespace Projet.Forms
             }
             else lblRemplir.Text = "Veuillez remplir tous les champs.";
         }
+
+        private void FormConnexion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

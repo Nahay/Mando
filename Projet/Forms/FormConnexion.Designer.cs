@@ -114,6 +114,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConnexion";
             this.Text = "FormConnexion";
+            this.Load += new System.EventHandler(this.FormConnexion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
