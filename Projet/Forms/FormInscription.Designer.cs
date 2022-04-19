@@ -155,6 +155,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormInscription";
             this.Text = "FormInscription";
+            this.Load += new System.EventHandler(this.FormInscription_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

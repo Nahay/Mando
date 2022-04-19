@@ -24,18 +24,14 @@ namespace Projet.Forms
             {
                 try
                 {
-                    SqlCommand cmdExists = new SqlCommand("SELECT count(*) nb FROM Utilisateur WHERE pseudo='" + txtUsername.Text.Trim() + "'", FormMain.cnGC);
-                    if ((int)cmdExists.ExecuteScalar() == 0)
-                    {
-                        SqlCommand cmdInsertUser = new SqlCommand("INSERT INTO Utilisateur (pseudo, mdp, nom, prenom, isAdmin) VALUES ('"
-                            + txtUsername.Text.Trim() + "'," +
-                            "HASHBYTES('SHA2_256','" + txtMdp.Text.Trim() + "'),'"
-                            + txtNom.Text.Trim() + "','"
-                            + txtPrenom.Text.Trim() + "',0)"
-                        , FormMain.cnGC);
-                        cmdInsertUser.ExecuteNonQuery();
-                        FormMain.CurrentForm = new FormConnexion();
-                    }
+                    SqlCommand cmdInsertUser = new SqlCommand("INSERT INTO Utilisateur (pseudo, mdp, nom, prenom, isAdmin) VALUES ('"
+                        + txtUsername.Text.Trim() + "'," +
+                        "HASHBYTES('SHA2_256','" + txtMdp.Text.Trim() + "'),'"
+                        + txtNom.Text.Trim() + "','"
+                        + txtPrenom.Text.Trim() + "',0)"
+                    , FormMain.cnGC);
+                    cmdInsertUser.ExecuteNonQuery();
+                    FormMain.CurrentForm = new FormConnexion();
                 }
 
                 catch (Exception ex)
@@ -44,6 +40,11 @@ namespace Projet.Forms
                 }
             }
             else lblValide.Visible = true;
+        }
+
+        private void FormInscription_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
