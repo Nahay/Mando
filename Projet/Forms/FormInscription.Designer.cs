@@ -38,6 +38,7 @@
             this.lblNom = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.lblValide = new System.Windows.Forms.Label();
+            this.lblNomPris = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtMdp
@@ -135,11 +136,23 @@
             this.lblValide.Text = "Veuillez compléter les champs.";
             this.lblValide.Visible = false;
             // 
+            // lblNomPris
+            // 
+            this.lblNomPris.AutoSize = true;
+            this.lblNomPris.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblNomPris.Location = new System.Drawing.Point(276, 337);
+            this.lblNomPris.Name = "lblNomPris";
+            this.lblNomPris.Size = new System.Drawing.Size(239, 21);
+            this.lblNomPris.TabIndex = 15;
+            this.lblNomPris.Text = "Nom d\'utilisateur indisponible.";
+            this.lblNomPris.Visible = false;
+            // 
             // FormInscription
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(804, 598);
+            this.Controls.Add(this.lblNomPris);
             this.Controls.Add(this.lblValide);
             this.Controls.Add(this.txtPrenom);
             this.Controls.Add(this.label3);
@@ -173,5 +186,6 @@
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label lblValide;
+        private System.Windows.Forms.Label lblNomPris;
     }
 }

@@ -20,6 +20,9 @@ namespace Projet.Forms
 
         private void btnInscription_Click(object sender, EventArgs e)
         {
+            lblNomPris.Visible = false;
+            lblValide.Visible = false;
+
             if (txtNom.Text != "" && txtPrenom.Text != "" && txtUsername.Text != "" && txtMdp.Text != "")
             {
                 try
@@ -36,6 +39,7 @@ namespace Projet.Forms
 
                 catch (Exception ex)
                 {
+                    lblNomPris.Visible = true;
                     Console.WriteLine("Erreur de requête :" + ex.Message);
                 }
             }
